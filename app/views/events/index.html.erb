@@ -1,0 +1,43 @@
+<h2>Foods</h2>
+<table>
+  <tr>
+    <th>
+      <%= link_to "Name", :sort => "name" %>
+    </th>
+    <th>
+      <%= link_to "Calories", :sort => "calories" %>
+    </th>
+  </tr>
+  <% @foods.each do |food| %>
+    <tr>
+      <td>
+        <%= food.name %>
+      </td>
+      <td>
+        <%= food.calories %>
+      </td>
+    </tr>
+    <% end %>
+</table>
+
+<h2>Exercises</h2>
+<table>
+  <tr>
+    <th>
+      <%= link_to "Name", :sort => "name" %>
+    </th>
+    <th>
+      <%= link_to "Calories", :sort => "calories" %>
+    </th>
+  </tr>
+  <% @exercises.each do |exercise| %>
+  <tr>
+    <td>
+      <%= exercise.name %>
+    </td>
+    <td>
+      <%= exercise.calories %>
+    </td>
+  </tr>
+  <% end %>
+</table>

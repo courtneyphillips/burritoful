@@ -13,8 +13,10 @@ gem 'pry'
 gem 'bootstrap_form'
 gem 'devise'
 gem 'acts_as_votable'
+gem 'simple_form'
 gem 'momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master'
+gem "will_paginate"
 
 group :development do
   gem 'byebug'

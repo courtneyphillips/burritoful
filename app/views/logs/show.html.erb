@@ -1,0 +1,49 @@
+<p><em>Current Log Date: <%= @log.date %></em></p>
+
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+  <h3>Foods</h3>
+</div>
+    <div class="panel panel-body">
+      <ul>
+  <% if @foods.any? %>
+
+    <% @foods.each do |food| %>
+      <li><%= food.name %>: <%= food.calories %></li>
+    <% end %>
+  <% else %>
+    "This day currently has no events; add some below?"
+  <% end %>
+</ul>
+</div>
+    </div>
+    <div class="alert alert-success">
+      <h5 class="food_cals">You've eaten <%= @calories_food %> calories.</h5>
+    </div>
+
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+  <h3>Exercises</h3>
+</div>
+<div class="panel panel-body">
+  <% if @exercises.any? %>
+  <ul>
+
+    <% @exercises.each do |exercises| %>
+      <li><%= exercises.name %>: <%= exercises.calories %></li>
+    <% end %>
+  <% else %>
+    "This day currently has no events; add some below?"
+  <% end %>
+</ul>
+</div>
+</div>
+<div class="alert alert-danger">
+  <h5 class="exercise_cals">You've burned <%= @calories_exercise %> calories.</h5>
+</div>
+<hr>
+
+<br>
+<a class="btn btn-danger btn-block" role="button" href="<%= new_log_event_path(@log) %>">Add Food and Exercise</a>

@@ -7,5 +7,7 @@ resources :logs do
   resources :events
 end
 
+resources :events
+
 
 end

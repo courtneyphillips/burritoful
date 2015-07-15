@@ -1,0 +1,7 @@
+<%= simple_form_for([@log, @event], html: {class: 'form-horizontal'}) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :event_type %>
+  <%= f.hint "Enter either 'exercise' or 'food'" %>
+  <%= f.input :calories %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,9 +1,10 @@
 
-<a class="btn btn primary" href="logs/new">Begin Today's Log</a>
+<a class="btn btn-danger" role="button" href="logs/new">Begin Today's Log</a>
 
-
+<ul>
 <% if @logs.any? %>
   <% @logs.each do |log| %>
-   <%= link_to log.date, log_show_path(log) %>
+   <li><%= link_to log.date, log_path(log) %></li>
   <% end %>
 <% end %>
+</ul>
